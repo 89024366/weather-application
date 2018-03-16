@@ -1035,7 +1035,6 @@ So far, I can download the latest weather temperature from the server as long as
 
 到目前为止,只要有互联网连接我们就可以从服务器下载最新的天气温度信息.那么当没有网络连接时我们的应用会怎么样呢?
 
-
 then I make it looks better.
 changes includ:
  adding the new icon to the application, 
