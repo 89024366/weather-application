@@ -1034,3 +1034,11 @@ It is important to note here that the information retrieved from the server base
 So far, I can download the latest weather temperature from the server as long as I have Internet access. What will happen if the device does not have access to the Internet?
 
 到目前为止,只要有互联网连接我们就可以从服务器下载最新的天气温度信息.那么当没有网络连接时我们的应用会怎么样呢?
+
+
+then I make it looks better.
+changes includ:
+ adding the new icon to the application, 
+ adding the blue background, 
+ adding the refresh button, 
+ when the refresh button is pressed, the temperature, the date and the day of the week are all updated.
