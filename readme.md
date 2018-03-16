@@ -8,7 +8,7 @@ changes includ:
  adding the refresh button, <br/>
  when the refresh button is pressed, the temperature, the date and the day of the week are all updated.<br/>
  
- At the begining:
+ At the begining:<br/>
  ![Weather application](display/18.png)
- after click:
-  ![Weather application](display/27.png)
+ after click:<br/>
+ ![Weather application](display/27.png)
