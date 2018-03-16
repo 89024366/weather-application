@@ -1,4 +1,4 @@
-package mg.studio.weatherappdesign;
+package com.example.asus.helloworld;
 
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
@@ -15,6 +15,10 @@ import java.net.MalformedURLException;
 import java.net.ProtocolException;
 import java.net.URL;
 
+import   java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -28,6 +32,35 @@ public class MainActivity extends AppCompatActivity {
         new DownloadUpdate().execute();
     }
 
+    public static String getWeek() {
+        Calendar cal = Calendar.getInstance();
+        int i = cal.get(Calendar.DAY_OF_WEEK);
+        switch (i) {
+            case 1:
+                return "SUNDAY";
+            case 2:
+                return "MONDAY";
+            case 3:
+                return "TUESDAY";
+            case 4:
+                return "WEDNESDAY";
+            case 5:
+                return "THURSDAY";
+            case 6:
+                return "FRIDAY";
+            case 7:
+                return "SATURDAY";
+            default:
+                return "";
+        }
+    }
+    public void btnClick_re(View view) {
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/yyyy");
+        Date date = new Date(System.currentTimeMillis());
+        new DownloadUpdate().execute();
+        ((TextView) findViewById(R.id.tv_date)).setText(simpleDateFormat.format(date));
+        ((TextView) findViewById(R.id.day_of_week)).setText(getWeek());
+    }
 
     private class DownloadUpdate extends AsyncTask<String, Void, String> {
 
@@ -84,6 +117,7 @@ public class MainActivity extends AppCompatActivity {
         protected void onPostExecute(String temperature) {
             //Update the temperature displayed
             ((TextView) findViewById(R.id.temperature_of_the_day)).setText(temperature);
+
         }
     }
 }
